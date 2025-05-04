@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Molnar Darius Vlad - Portofoliu</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function switchLanguage(language) {
+            var elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(function (element) {
+                element.style.display = (element.getAttribute('data-lang') === language) ? 'block' : 'none';
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Molnar Darius Vlad</h1>
         <p>Web Developer Junior</p>
         <nav>
-            <a href="#proiecte">Proiecte</a>
-            <a href="#despre">Despre mine</a>
-            <a href="#contact">Contact</a>
+            <a href="javascript:void(0)" onclick="switchLanguage('ro')">Română</a> | 
+            <a href="javascript:void(0)" onclick="switchLanguage('en')">English</a>
         </nav>
     </header>
 
     <main>
-        <section id="proiecte">
+        <!-- Secțiune în Română -->
+        <section data-lang="ro" style="display: block;">
             <h2>Proiecte</h2>
             <div class="project">
                 <h3>Septica Game</h3>
@@ -31,18 +39,48 @@
             </div>
         </section>
 
-        <section id="despre">
+        <!-- Secțiune în Engleză -->
+        <section data-lang="en" style="display: none;">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Septica Game</h3>
+                <p>Classic Romanian card game with ranking and AI. Built with Next.js and React.</p>
+                <p>Status: in progress</p>
+            </div>
+            <div class="project">
+                <h3>Movie Tracker</h3>
+                <p>Simple app for saving your favorite movies. Built with HTML, CSS, Flask (Python).</p>
+            </div>
+        </section>
+
+        <section data-lang="ro" style="display: block;">
             <h2>Despre mine</h2>
             <p>Sunt un web developer junior pasionat de tehnologie și proiecte practice.</p>
             <p>Am cunoștințe de bază de HTML, CSS, JavaScript și Python (Flask), învăț rapid și sunt serios.</p>
             <p>Vorbesc limba engleză la nivel B2+ și caut oportunități reale de colaborare.</p>
         </section>
 
-        <section id="contact">
+        <section data-lang="en" style="display: none;">
+            <h2>About me</h2>
+            <p>I am a junior web developer passionate about technology and practical projects.</p>
+            <p>I have basic knowledge of HTML, CSS, JavaScript, and Python (Flask). I learn quickly and am serious about my work.</p>
+            <p>I speak English at a B2+ level and am looking for real collaboration opportunities.</p>
+        </section>
+
+        <section data-lang="ro" style="display: block;">
             <h2>Contact</h2>
             <ul>
                 <li>Email: <a href="mailto:molnardarius18@gmail.com">molnardarius18@gmail.com</a></li>
                 <li>Telefon: <a href="tel:+40750105870">0750105870</a></li>
+                <li>GitHub: <a href="https://github.com/Dariusm91" target="_blank">Dariusm91</a></li>
+            </ul>
+        </section>
+
+        <section data-lang="en" style="display: none;">
+            <h2>Contact</h2>
+            <ul>
+                <li>Email: <a href="mailto:molnardarius18@gmail.com">molnardarius18@gmail.com</a></li>
+                <li>Phone: <a href="tel:+40750105870">0750105870</a></li>
                 <li>GitHub: <a href="https://github.com/Dariusm91" target="_blank">Dariusm91</a></li>
             </ul>
         </section>
